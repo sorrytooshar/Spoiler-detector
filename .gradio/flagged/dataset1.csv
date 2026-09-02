@@ -1,0 +1,2 @@
+review_text,output,timestamp
+waqtched spider man today great movie but gwen dies in it so sad.,"{""label"": ""Not Spoiler"", ""confidences"": [{""label"": ""Not Spoiler"", ""confidence"": 0.5544664263725281}, {""label"": ""Spoiler"", ""confidence"": 0.4455335736274719}]}",2026-09-02 21:06:56.946355

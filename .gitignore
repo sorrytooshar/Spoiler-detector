@@ -1,0 +1,4 @@
+venv/
+spoiler_model/
+__pycache__/
+.env

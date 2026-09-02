@@ -3,7 +3,7 @@
 A fine-tuned DistilBERT model that predicts whether a movie review contains spoilers, based purely on the review text.
 
 **Live demo (local):** run `app.py` — see instructions below
-**Model:** [huggingface.co/YOUR_USERNAME/spoiler-detector](https://huggingface.co/YOUR_USERNAME/spoiler-detector)
+**Model:** [huggingface.co/toosharm/spoiler-detector](https://huggingface.co/toosharm/spoiler-detector)
 
 ---
 
@@ -26,11 +26,11 @@ Movie review platforms often bury spoilers inside otherwise normal-looking revie
 
 ## Results
 
-| Epoch | Training Loss | Validation Loss | Accuracy | F1 |
-|-------|---------------|------------------|----------|-----|
-| 1 | 1.226 | 1.191 | 67.5% | 65.5% |
-| 2 | 1.141 | 1.165 | 69.1% | 65.9% |
-| 3 | 1.102 | 1.149 | **69.4%** | **69.0%** |
+| Epoch | Training Loss | Validation Loss | Accuracy  | F1        |
+| ----- | ------------- | --------------- | --------- | --------- |
+| 1     | 1.226         | 1.191           | 67.5%     | 65.5%     |
+| 2     | 1.141         | 1.165           | 69.1%     | 65.9%     |
+| 3     | 1.102         | 1.149           | **69.4%** | **69.0%** |
 
 ![graph](screenshots/graph.png)
 
@@ -45,23 +45,27 @@ Review lengths in this dataset average 281 words (up to 1,472), while DistilBERT
 ## Example predictions
 
 **Spoiler (62% confidence):**
+
 > "I watched amazing spider man movie so good. In the end of the movie gwen stacy dies."
-![testimg2](screenshots/testimg2.png)
+> ![testimg2](screenshots/testimg2.png)
 
 **Not spoiler (82% confidence)** — same review, spoiler sentence removed:
+
 > "I watched amazing spider man movie so good."
-![testimg1](screenshots/testimg1.png)
+> ![testimg1](screenshots/testimg1.png)
 
 **Spoiler (51% confidence):**
+
 > [Bugonia was a great watch such a weird plot.Emma Stone was so convincing that till the very end i was sure she isn't the alien.]- Spoiler
-This example illustrates realistic model uncertainty — the review contains ambiguous or subtle signals rather than clear spoiler language, and the model's near-50% confidence reflects that ambiguity rather than a wrong or overconfident guess.
-![testimg3](screenshots/testimg3.png)
+> This example illustrates realistic model uncertainty — the review contains ambiguous or subtle signals rather than clear spoiler language, and the model's near-50% confidence reflects that ambiguity rather than a wrong or overconfident guess.
+> ![testimg3](screenshots/testimg3.png)
 
 **Not spoiler (83% confidence):**
-> [I can't believe they killed off the main character in the final battle. The twist where his father turns out to be the villian in the whole time completely changed how i saw the entire movie. And that ending where she choose to sacrifice herself instead of escaping -- I did not see that coming at all.] + Spoiler
-![testimg4](screenshots/testimg4.png)
 
-*(screenshots in `/screenshots`)*
+> [I can't believe they killed off the main character in the final battle. The twist where his father turns out to be the villian in the whole time completely changed how i saw the entire movie. And that ending where she choose to sacrifice herself instead of escaping -- I did not see that coming at all.] + Spoiler
+> ![testimg4](screenshots/testimg4.png)
+
+_(screenshots in `/screenshots`)_
 
 ## Running locally
 
@@ -73,6 +77,7 @@ venv\Scripts\activate
 pip install -r requirements.txt
 python app.py
 ```
+
 Model weights are downloaded automatically from HuggingFace Hub on first run.
 
 ## Tech stack
